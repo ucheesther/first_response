@@ -1,0 +1,21 @@
+/*
+  ___________           __         .__    .__
+ /   _____/  | __ _____/  |_  ____ |  |__ |__| ____
+ \_____  \|  |/ // __ \   __\/ ___\|  |  \|  |/  _ \
+ /        \    <\  ___/|  | \  \___|   Y  \  (  <_> )
+/_______  /__|_ \\___  >__|  \___  >___|  /__|\____/
+        \/     \/    \/          \/     \/
+
+ Sketch API v2020.0.673
+ Copyright (c) Sketch.IO, Inc. <https://sketch.io>
+ Commit: 79007db7aea8274d8e0a2c99a25f2979a76a5242
+
+ SketchAPI uses certain modules under license from third parties.
+ Sketch.IO offers the SketchAPI, pursuant to its own license,
+ to you on the condition you accept the following modules under
+ their respective licenses:
+*/
+
+arc-timer,arc-timer canvas{margin:auto;top:0;left:0;right:0;bottom:0}arc-timer{display:block;position:relative;width:100%;height:100%}arc-timer.backdrop{transition:opacity .35s;opacity:0;position:fixed;z-index:10000;background:rgba(0,0,0,.25)}arc-timer.visible{opacity:1}arc-timer canvas{border-radius:50%;background:#000b00;color:#fff;padding:2px;position:absolute}
+
+
