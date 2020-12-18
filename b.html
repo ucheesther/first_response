@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="materialize/css/font/material-icons.css">
+    <style>
+		header{
+			background:url(materialize/Image/sony.jpg);
+			background-size:cover;
+			min-height: 600px;
+			background-position: center;
+		}
+		@media screen and (max-width:670px){
+			header{
+				min-height:300px;
+			}
+        }
+        #kes{
+            float: center;
+			padding-top: 100px;
+			padding-bottom:20px;
+			margin-top: 30px;
+			margin-bottom: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <nav class="nav-wrapper transparent">
+                <div class="container">
+                    <a href="#!" class="brand-logo">Kirsty Photography</a>
+                    <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Training</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                    <ul class="sidenav grey text-lighten-2" id="mobile-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Training</a></li>
+                        <li><a href="#">About Us</a></li>
+
+                    </ul>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="center" id="kes">
+			<h2 class="brown-text">Portrait Photography</h2>
+			<p class="white-text darken-4">Click to see amazing photos</p>
+			<a href="#" class="btn btn-small waves-effect orange">Book a shoot</a>
+		</div>
+    </header><br>
+
+    <section class="section container scrollspy" id="gallery">
+        <h3 class="black-text center">See what inspires us</h3>
+        <div class="divider black"></div>
+        <div class="row">
+            <div class="col s12 m12 l4">
+                <div class="card black white-text">
+                <div class="video-container">
+                    <iframe width="420" height="315"
+                 src="Materialize/Image/BTS1.MP4">
+                </iframe>
+                </div>
+                <div content="card-content">
+                    <h4 class="card-title center">Behind The Scenes</h4>
+                </div>
+                <div class="card-action center ">
+                    <a href="#" class="white-text">Click to see more</a>
+                </div>
+            </div>
+            </div>
+            <div class="col s12 m12 l4 ">
+                <div class="card orange">
+                <div class="video-container">
+                    <iframe width="420" height="315"
+            src="Materialize/Image/BTS2.mp4">
+                </iframe>
+                </div>
+                <div content="card-content">
+                    <h4 class="card-title center">Editing Process</h4>
+                </div>
+                <div class="card-action center">
+                    <a href="#" class="white-text">Click to see more</a>
+                </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l4 ">
+                <div class="card black white-text">
+                <div class="video-container">
+                    <iframe width="420" height="315"
+            src="Materialize/Image/dara.mp4">
+            </iframe>
+                    
+                </div>
+                <div content="card-content">
+                    <h4 class="card-title center">Final Work</h4>
+                </div>
+                <div class="card-action center">
+                    <a href="#" class="white-text">Click to see more</a>
+                </div>
+        
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!--parallax-->
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="materialize/Image/street.jpg" alt="picture" class="responsive-img">
+        </div>
+    </div><br>
+
+    <!--About Section-->
+    <div class="container about">
+        <div class="row">
+            <div class="col s12 m12 l6">
+                <h4 class="indigo-text">About Kirsty Photography</h4>
+                <p>Photography is all about bringing out the best version of you and showing it to the world.
+                I have always wanted a little creative space to express myself and share my images with you all.
+                That is the essence of this website. Whether you go through the gallery or check out our latest training offerings,
+                do so with the mindset of you walking through an online gallery.
+                Welcome to my world!
+                </p>
+            </div>
+            <div class="col s12 m12 l6">
+                <img src="materialize/Image/k2.jpg" class="responsive-img">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Footer-->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s6 m6 l6">
+                    <p>This is Kirsty's footer</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <p>Designed by Kirsty for <a href="https://pearlsafrica.org">Pearls Africa</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="materialize/js/jquery.js"></script>
+        <script src="materialize/js/materialize.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+                $('.parallax').parallax();
+                
+            });
+        </script>
+
+</body>
+</html>

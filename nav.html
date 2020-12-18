@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="materialize/css/materialize.min.css">
+        <script src="materialize/js/materialize.min.js"></script>
+        <title> Document</title>
+        <style>
+            header{
+                 background: url(img/coffee.jpeg);
+background-size: cover;
+background-position: center;
+min-width: height 50px ;
+            }
+        </style>
+        </head>
+<body>
+<header>
+<nav class="nav-wrapper blue ">
+    <div class="container">
+    <a href="" class="brand-logo">picture</a>
+    <a href="" class="sidenav-trigger" data-target="mobile-menu">
+        <i class="material-icons">menu</i>
+    </a>
+    <ul class="right hide-on-med-and-down">
+        <li> <a href="#">photo</a> </li>
+        <li> <a href="#">contact</a> </li>
+        <li> <a href="#">Services</a> </li>
+    </ul>
+      <ul class="sidenav grey lighten-2" id="mobile-menu">
+     <li> <a href="#">photo</a> </li>
+   <li> <a href="#">contact</a> </li>
+        <li> <a href="#">Services</a> </li>
+      </ul>
+</div>
+</nav>
+</header>
+    <div class="row">
+        <div class="col s6 m6 16"><p class="z-depth-0 blue">a shadowed box</p></div>
+        <div class="col s6 m6 16"><p class="z-depth-1 blue lighten-4">a shadowed box</p></div>
+        <div class="col s6 m6 16"><p class="z-depth-2 blue lighten-3">a shadowed box</p></div>
+        <div class="col s6 m6 16"><p class="z-depth-3 blue lighten-2">a shadowed box</p></div>
+        <div class="col s6 m6 16"><p class="z-depth-4 blue lighten-2">a shadowed box</p></div>
+        </div>
+
+        <nav>
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="#1" class="brand-logo">logo</a> 
+            <a href="#" class="sidenav-trigger" data-target="links"><i class="materialize-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+               <li><a href="#">link1</a></li>
+<li><a href="#">link2</a></li>
+<li><a href="#">link3</a></li>
+</ul>
+        </div>
+   <ul class="sidenav" id="links">
+       <li><a href="#">about Us</a></li>
+       <li><a href="#">Home</a></li>
+       <li><a href="#">Shop</a></li>
+       </ul>
+       </div>
+</nav>    
+<div class="container">
+    <h2>cards</h2>
+        <div class="col s16 m4 l6">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-image">
+                    <img src="tara.jpeg" alt="taraji">
+                    <a href="#" class="halfway-fab btn-floating pink pulse">
+                        <i class="material-icons">fav</i>
+                    </a>
+                <div class="card-content">
+                    <span class="card-title">movie star</span>
+ <p>movie star</p>
+                </div>
+<div class="card-action">
+    <a href="#">Expand for more</a>
+    <a href="#">Cast and Title </a>
+</div>
+            </div>
+    </div>
+</div>
+</div>
+<div class="col s16 m4 l6">
+<div class="card">
+    <div class="card-image">
+        <img src="materialize/images/fried.jpeg">
+        <a href="#" class="halfway-fab btn-floating pink pulse">
+         <i class="material-icons">fav</i>   
+         </a>
+    </div>
+    <div class="card-content">
+        <span class="card-title">Fried Rice</span>
+        <p>spoil me!</p>
+    </div>
+    <div class="card-action">
+        <a href="#">Get a Plate</a>
+        <a href="#">Favorite</a>
+    </div>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="seafood.jpeg" alt="pasta" class="responsive-img">
+    </div>
+</div>
+<div class="container">
+    <p>My Bonnie lies over the ocean.</p>
+</div>
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="italy.jpeg" alt="italy" class="responsive-img">
+    </div>
+    <div class="container">
+        <p>My Bonnie lies over the ocean.</P>
+    </div>
+    <br>
+    <div>
+<footer class="page-footer center grey darken-3">
+<div class="container">
+     <div class="row">
+         <div class="col s12 16">
+             <p>christina Yang</p>
+             <h5>About Me </h5>
+             </div>
+             <div class="footer-copyright center">
+                 <div class="container">
+           <p> designed by forbes</p>
+           </div>
+           </div>
+         </div>
+         <div class="col s12 14 offset-12">
+   <h5>connect</h5>
+   <ul>
+       <li><a href="#" class="grey-text text-lighten-3">Facebook</a></li>
+       <li><a href="#" class="grey-text text-lighten-3">Twitter</a></li>
+       <li><a href="#" class="grey-text text-lighten-3">Instagram</a></li>
+    </ul>
+         </div>
+        </div>
+</div>
+</footer>
+</div>
+<script src="materialize/js/jquery.js"></script>
+<script src="materialize/js/materialize.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".sidenav").sidenav();
+
+        $('.parallax').parallax();
+    });
+</script>
+   </body>
+   </html>

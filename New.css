@@ -1,0 +1,22 @@
+
+    .center{
+        text-align: center;
+        color: aqua;
+        background-color: brown;
+    }   
+    p {
+        color: burlywood;
+        text-align: center;
+        nav-index: auto;
+    }     
+    #h1 {text-align: justify;
+        color: chocolate;
+        padding: 5px;
+        word-wrap: normal;
+        word-break: inherit;
+
+    }
+    title{color: lavenderblush;
+        text-align: center;
+        opacity: inherit;
+    }
