@@ -10,17 +10,12 @@
     <link rel="stylesheet" href="materialize/css/font/material-icons.css">
     <link rel="stylesheet" href="materialize/materialize-social-master/materialize-social.css">
     
-    <style>
-      #map {
-    height: 400px;
-    width: 75%;
-  }
-</style>
-  <!-- <style>
+
+  <style>
         #map {
       height: 400px;
       width: 75%;
-    }vgit add .
+    }
 
     .container{
         margin: 10px;
@@ -74,29 +69,27 @@
       text-decoration: none;
       color: cadetblue;
     }
-  </style> -->
+    
+  </style>
 </head>
 
 <body>
-  <div class="pac-card" id="pac-card">
-    <div>
-        <div id="label">Location search</div>
-    </div>
-    <div id="pac-container">
-        <input id="pac-input" type="text" placeholder="Enter a location">
-        <div id="location-error"></div>
-    </div>
-</div>
-<div id="panel"></div>
-<div id="map"></div>
-<div id="infowindow-content">
-    <img src="" width="16" height="16" id="place-icon"> <span
-        id="place-name" class="title"></span><br> <span
-        id="place-address"></span>
-</div>
+  <div class="container center-align">
+      <h3>Find Hospitals amd Pharmacies Nearby</h3>
+      <input type="text" class="searchInput" placeholder="Search hospital or pharmacy">    
+      <input type="submit" class="btn">
+  </div>
+  
+    <div class="container">  
+        <!-- <div id="panel"></div> -->
 
-  <script src="hospitals2.js"></script>    
-+searchInput.value
+  <!-- Map appears here -->
+        <div id="map"></div>
+</div> 
+
+
+  <script src="h3.js"></script>    
++searchInput.3
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApD5vFlvR4z60yOFRPB8mWtnh1e1N319Q&libraries=places&callback=initMap"
 type="text/javascript"></script>
