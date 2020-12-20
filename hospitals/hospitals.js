@@ -1,27 +1,18 @@
+
+let pos;
+let map;
+let bounds;
+let infoWindow;
+let currentInfoWindow;
+let service;
+let infoPane;
 function initMap() {
+  // Initialize variables
   bounds = new google.maps.LatLngBounds();
   infoWindow = new google.maps.InfoWindow;
   currentInfoWindow = infoWindow;
-   /* TODO: Step 4A3: Add a generic sidebar*/  
+  /*  Add a generic sidebar */
   infoPane = document.getElementById('panel');
-  var centerCoordinates = new google.maps.LatLng(6.5115114,-3.4946813,10);
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center : centerCoordinates,
-    zoom : 18
-  });
-  var card = document.getElementById('pac-card');
-  var input = document.getElementById('pac-input');
-  var infowindowContent = document.getElementById('infowindow-content');
-    
-  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
-
-  var autocomplete = new google.maps.places.Autocomplete(input);
-  var infowindow = new google.maps.InfoWindow();
-  infowindow.setContent(infowindowContent);
-
-  var marker = new google.maps.Marker({
-    map : map
-  });
 
   // Try HTML5 geolocation
   if (navigator.geolocation) {
@@ -32,11 +23,14 @@ function initMap() {
       };
       map = new google.maps.Map(document.getElementById('map'), {
         center: pos,
-        zoom:18
+        zoom: 17,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+     
       });
-           
+      bounds.extend(pos);
+      
       infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
+      infoWindow.setContent('Current Location.');
       infoWindow.open(map);
       map.setCenter(pos);
 
@@ -50,28 +44,30 @@ function initMap() {
     // Browser doesn't support geolocation
     handleLocationError(false, infoWindow);
   }
-  
-  autocomplete.addListener('place_changed',function() {
-    document.getElementById("location-error").style.display = 'none';
-    infowindow.close();
-    marker.setVisible(false);
-    var place = autocomplete.getPlace();
-    if (!place.geometry) {
-      document.getElementById("location-error").style.display = 'inline-block';
-      document.getElementById("location-error").innerHTML = "Cannot Locate '" + input.value + "' on map";
-      return;
-    }
+}
 
-    map.fitBounds(place.geometry.viewport);
-    marker.setPosition(place.geometry.location);
-    marker.setVisible(true);
-
-    infowindowContent.children['place-icon'].src = place.icon;
-    infowindowContent.children['place-name'].textContent = place.name;
-    infowindowContent.children['place-address'].textContent = input.value;
-    infowindow.open(map, marker);
+// Handle a geolocation error
+function handleLocationError(browserHasGeolocation, infoWindow) {
+  // Set default location to Ikeja, Lagos
+  pos = { lat: -6.6018, lng: 3.3515 };
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: pos,
+    zoom: 17
   });
-  // Perform a Places Nearby Search Request
+
+  // Display an InfoWindow at the map center
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+    'Geolocation permissions denied. Using default location.' :
+    'Error: Your browser doesn\'t support geolocation.');
+  infoWindow.open(map);
+  currentInfoWindow = infoWindow;
+
+  // Call Places Nearby Search on the default location
+  getNearbyPlaces(pos);
+}
+
+// Perform a Places Nearby Search Request
 function getNearbyPlaces(position) {
   let request = {
     location: position,
@@ -91,20 +87,28 @@ function nearbyCallback(results, status) {
 }
 
 // Set markers at the location of each place result
+const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let labelIndex = 0;
+const image ="http://maps.google.com/mapfiles/kml/paddle/blu-blank.png";
 function createMarkers(places) {
   places.forEach(place => {
     let marker = new google.maps.Marker({
       position: place.geometry.location,
+      animation: google.maps.Animation.DROP,
       map: map,
-      title: place.name
+      label: labels[labelIndex++ % labels.length],
+      title: place.name,
+      icon:image
     });
+
+   
 console.log(place);
-    /* TODO: Step 4B: Add click listeners to the markers */
+    /* Add click listeners to the markers */
     // Add click listener to each marker
     google.maps.event.addListener(marker, 'click', () => {
       let request = {
         placeId: place.place_id,
-        fields: ['name', 'formatted_address', 'geometry', 'opening_hours',
+        fields: ['name', 'formatted_address', 'geometry', 'rating',
           'website', 'photos']
       };
 
@@ -124,15 +128,15 @@ console.log(place);
   map.fitBounds(bounds);
 }
 
-/* TODO: Step 4C: Show place details in an info window */
+/*  Show place details in an info window */
 // Builds an InfoWindow to display details above the marker
 function showDetails(placeResult, marker, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     let placeInfowindow = new google.maps.InfoWindow();
-    let opening_hours = "None";
-    if (placeResult.opening_hours) opening_hours = placeResult.opening_hours;
+    let rating = "None";
+    if (placeResult.rating) rating = placeResult.rating;
     placeInfowindow.setContent('<div><strong>' + placeResult.name +
-      '</strong><br>' + 'opening_hours: ' + opening_hours + '</div>');
+      '</strong><br>' + 'Rating: ' + rating + '</div>');
     placeInfowindow.open(marker.map, marker);
     currentInfoWindow.close();
     currentInfoWindow = placeInfowindow;
@@ -142,7 +146,7 @@ function showDetails(placeResult, marker, status) {
   }
 }
 
-/* TODO: Step 4D: Load place details in a sidebar */
+/*  Load place details in a sidebar */
 // Displays place details in a sidebar
 function showPanel(placeResult) {
   // If infoPane is already open, close it
@@ -155,7 +159,7 @@ function showPanel(placeResult) {
     infoPane.removeChild(infoPane.lastChild);
   }
 
-  /* TODO: Step 4E: Display a Place Photo with the Place Details */
+  /*  Display a Place Photo with the Place Details */
   // Add the primary photo, if there is one
   if (placeResult.photos) {
     let firstPhoto = placeResult.photos[0];
@@ -170,11 +174,11 @@ function showPanel(placeResult) {
   name.classList.add('place');
   name.textContent = placeResult.name;
   infoPane.appendChild(name);
-  if (placeResult.opening_hours) {
-    let opening_hours = document.createElement('p');
-    opening_hours.classList.add('details');
-    opening_hours.textContent = `opening_hours: ${placeResult.opening_hours} \u272e`;
-    infoPane.appendChild(opening_hours);
+  if (placeResult.rating) {
+    let rating = document.createElement('p');
+    rating.classList.add('details');
+    rating.textContent = `Rating: ${placeResult.rating} \u272e`;
+    infoPane.appendChild(rating);
   }
   let address = document.createElement('p');
   address.classList.add('details');
@@ -190,28 +194,8 @@ function showPanel(placeResult) {
     websitePara.appendChild(websiteLink);
     infoPane.appendChild(websitePara);
   }
+ 
 
   // Open the infoPane
   infoPane.classList.add("open");
 }
-}
-function handleLocationError(browserHasGeolocation, infoWindow) {
-  // Set default location to Sydney, Australia
-  pos = { lat: -33.856, lng: 151.215 };
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: pos,
-    zoom: 15
-  });
-
-  // Display an InfoWindow at the map center
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-    'Geolocation permissions denied. Using default location.' :
-    'Error: Your browser doesn\'t support geolocation.');
-  infoWindow.open(map);
-  currentInfoWindow = infoWindow;
-
-  // Call Places Nearby Search on the default location
-  getNearbyPlaces(pos);
-}
-
