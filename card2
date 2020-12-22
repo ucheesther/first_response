@@ -1,0 +1,121 @@
+ <div class="row">   
+        <div class="col s12 m6 l3">       
+          <div class="card">
+                 <div class="card-image waves-effect waves-block waves-light">
+                   <img class="activator" src="C:\Users\FASHOLA TOLULOPE\Desktop\mat\la training\img\beesting.jpg">
+               </div>
+                   <div class="card-content">
+                     <span class="card-title activator grey-text text-darken-4">BEE STING<i
+                       class="material-icons right">more_vert</i></span>
+                     <p>Click for some first aid tips</p>
+                   </div>
+                   <div class="card-reveal">
+                     <span class="card-title grey-text text-darken-4">Some First Tips<i class="material-icons right">close</i></span>
+                     <p>-wash the area and apply ice to reduce the swelling<br>-if the person has an allergy to bee stings,immobilize the person and seek immediate medical help.
+                      </p>
+                   </div>
+                 </div> </div>
+                 </div>
+                 
+                 <div class="row">  
+                 <div class="col s12 m6 l3">       
+                    <div class="card">
+                           <div class="card-image waves-effect waves-block waves-light">
+                             <img class="activator" src="C:\Users\FASHOLA TOLULOPE\Desktop\mat\la training\img\cut.jpg">
+                         </div>
+                             <div class="card-content">
+                               <span class="card-title activator grey-text text-darken-4">CUTS<i
+                                 class="material-icons right">more_vert</i></span>
+                               <p>Click for some first aid tips</p>
+                             </div>
+                             <div class="card-reveal">
+                               <span class="card-title grey-text text-darken-4">Some First Tips<i class="material-icons right">close</i></span>
+                               <p>Incise wounds: caused by sharp objecs ie knife or razor
+                                   <br>Lacerations: torn and irregular edges caused by machinery or animal claws
+                                   <br>Contused wounds: accompanied by bruising, caused by crushing or direct blow
+                                   <br>Puncture Wounds: might have small openings but might also be very deep, caused by a stab from a sharp pointed instrument 
+                                   <br>- Place the victim properly and elevate the bleeding part
+                                   <br>- Allow blood clots to be formed do not disturb and clot that is formed
+                                   <br>- Expose the wound as carefully as possible and remove any visible foreign bodies that can easily be picked our or wiped off 
+                                   <br>- Apply direct pressure on the cut with a clean cloth or tissue until bleeding stops
+                                   <br>- Apply clean dressing and bandage
+                                   <br>- If foreign body in the wound cannot be removed easily, cover it with a dressing, build up sufficient pads around the wound without apply pressure to the foreign body.
+                                   <br>- seek immediate medical attention as soon as possible.
+                                   
+
+                                </p>
+                             </div>
+                           </div> </div>
+                        </div>
+                        <div class="row">  
+                           <div class="col s12 m6 l3">       
+                            <div class="card">
+                                   <div class="card-image waves-effect waves-block waves-light">
+                                     <img class="activator" src="C:\Users\FASHOLA TOLULOPE\Desktop\mat\la training\img\dia.jpg">
+                                 </div>
+                                     <div class="card-content">
+                                       <span class="card-title activator grey-text text-darken-4">DIARRHOEA<i
+                                         class="material-icons right">more_vert</i></span>
+                                       <p>Click for some first aid tips</p>
+                                     </div>
+                                     <div class="card-reveal">
+                                       <span class="card-title grey-text text-darken-4">Some First Tips<i class="material-icons right">close</i></span>
+                                <p>-drink plenty of clear fluids like water, fruit juices
+                                   <br> -avoid fruit juices
+                                   <br> -avoid milk based products, alcohol, apple juice and caffeine for 3 to 5 days after feeling better
+                                    
+                                        </p>
+                                     </div>
+                                   </div> </div>
+                        </div>
+                        <div class="row">  
+                                   <div class="col s12 m6 l3">       
+                                    <div class="card">
+                                           <div class="card-image waves-effect waves-block waves-light">
+                                             <img class="activator" src="C:\Users\FASHOLA TOLULOPE\Desktop\mat\la training\img\hot.jpg">
+                                         </div>
+                                             <div class="card-content">
+                                               <span class="card-title activator grey-text text-darken-4">HOT SPICE PEEPER IN THE EYES OR SKIN<i
+                                                 class="material-icons right">more_vert</i></span>
+                                               <p>Click for some first aid tips</p>
+                                             </div>
+                                             <div class="card-reveal">
+                                               <span class="card-title grey-text text-darken-4">Some First Tips<i class="material-icons right">close</i></span>
+                                               <p>-if you get pepper in your eyes, wash you hand thoroughly,  soak a cotton ball in cold milk and place over the affected eye,
+                                             you can also use for fingers for this
+                                              <br>-for skin, rub alcohol on affected area, then soak the skin in milk or another dairy product 
+                                               <br>-do not use water as this spreads the pepper even further 
+                                                
+                                                </p>
+                                             </div>
+                                           </div> </div>
+                 </div>
+                 <div class="row">  
+                 <div class="col s12 m6 l3">       
+                    <div class="card">
+                           <div class="card-image waves-effect waves-block waves-light">
+                             <img class="activator" src="C:\Users\FASHOLA TOLULOPE\Desktop\mat\la training\img\shock.jpg">
+                         </div>
+                             <div class="card-content">
+                               <span class="card-title activator grey-text text-darken-4">ELECTROCUTION<i
+                                 class="material-icons right">more_vert</i></span>
+                               <p>Click for some first aid tips</p>
+                             </div>
+                             <div class="card-reveal">
+                               <span class="card-title grey-text text-darken-4">Some First Tips<i class="material-icons right">close</i></span>
+                               <p>-Switch off current or cut the supply by removing the plug or breaking the cable. Do not attempt to do this with a scissors or knife
+                               <br> - Remove the patient from the contact with great care using dry insulating materials like gloves, folded cloth or newspaper 
+                                <br>- If patient is conscious, reassure the patient
+                                <br>- Lay the person down on thier back with the head low and turned to one side
+                               <br> - Loosen clothing around neck, chest and waist
+                               <br> - wrap them in a blanket 
+                               <br> - Give sips of water, or any liquid except alcohol
+                                <br>- Seek immediate medical attention 
+                                
+                                
+                                </p>
+                             </div>
+                           </div> </div>
+ </div>
+                 <!-- </div> -->
+      
