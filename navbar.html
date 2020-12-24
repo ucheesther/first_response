@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>Navigation</title>
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="materialize/css/font/material-icons.css">
-    <style>
+     <style>
         body{
     margin: 0;
     padding: 0;
-    background: #FFFC85
+    background: #8892ec
 }
 .toggle{
     position: fixed;
@@ -57,24 +57,62 @@ ul li a{
     color: #262626;
 }
 ul li a:hover{
-    background: #FFFC85
+    background: #8587ff
 }
 .menu.active{
     left: 0;
     overflow: auto;
 }
     </style>
-<div class="toggle">
-    <a><i class="fa fa-bars"></i></a>
-</div>
-<div class="menu">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Emergencies</a></li>
-        <li><a href="#">Find a Hospital</a></li>
-        <li><a href="#">Toll Free</a></li>
-    </ul>
-</div>
+    <div class="toggle">
+        <a><i class="fa fa-bars"></i></a>
+    </div>
+    <div class="menu">
+        <ul>
+            <ul class="right show-on-med-and-down">
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">About</a> </li>
+                <li> <a href="#">Hospitals Nearby</a> </li>
+            </ul>
+              <ul class="sidenav red lighten-2" id="mobile-menu">
+             <li> <a href="#">Home</a> </li>
+           <li> <a href="#">About</a> </li>
+                <li> <a href="#">Hospitals Nearby</a> </li>
+              </ul>
+        </div>
+        </nav>
+        <div class="navbar-fixed">
+            <nav class="lighten-2">
+                <div class="container">
+                    <a href="" class="brand-logo-bold">
+                        <i class="material-icons"></i>
+                 </a>
+                <div class="nav-wrapper black">
+                    <a href="#!" class="contact form"></a>
+                    <a href="#" class="sidenav-trigger" data-target="links">
+                        <i class="material-icons">WELCOME TO FIRST RESPONSE!</i>   
+                    </a>
+                    <ul class="right show-on-med-and-down">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#"></a>Hospital Nearby</li>
+                        <div class="fixed-action-btn horizontal click-to-toggle"> <a class="btn-floating.social-icon btn-large red"> <i class="material-icons"><MENU></MENU></i> </a> <ul> <li> <a class="waves-effect waves-light btn-floating social instagram"><i class="fa fa-instagram"></i></a> </li> <li> <a class="waves-effect waves-light btn-floating facebook"><i class="fa fa-facebook"></i></a> </li> <li> <a class="waves-effect waves-light btn-floating github"><i class="fa fa-github"></i></a> </li> </ul></div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="image">
+            <img src="images/Logo_files/abstract.png" class="responsive-img">
+        </div>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".sidenav").sidenav();
+            $('.toggle').click(function(){
+                $('.menu').toggleClass('active');
+            });
+        });
+    </script>
 </head>
 </html>
